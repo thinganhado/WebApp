@@ -1,0 +1,588 @@
+/*
+filename: styles.css 
+author: Thi Ngan Ha Do
+created: 20/03/2024
+last modified: 27/03/2024
+description: assign1
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body, html {
+    font-family: "Georgia", sans-serif;
+    overflow-x: hidden;
+    font-style: normal;
+    background-color: #B8D1E0;
+}
+
+hr{
+    opacity: 0.5;
+}
+
+hr:not(.special){
+    margin: 20px 0 20px 0;
+}
+
+/*Menu bar*/
+.logo img{
+	display:block;
+	float:left;
+    margin-left: 4%;
+	height:60px;
+	width: 150px;}
+
+#name{
+    display: inline;
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #192740;
+    font-style: italic;
+}
+
+header {
+    font-weight: bold;
+    overflow:auto;
+    padding: 1em 2em;
+    width: 100%;
+    text-align: right;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;}
+
+header li{
+	padding: 15px;
+	display:inline-block;
+    transition: all 0.3s ease;}
+
+header a{
+    text-decoration: none;
+    padding: 1em 1em;
+    color: #192740;
+    height: max-content;
+    transition: all 0.3s ease;}
+
+.logo a:hover{
+    background-color: #4B6D90;
+    border-radius: 5px;
+    color: white;}
+
+/*footer*/
+.footer{
+    clear: both;
+    display: block;
+}
+
+.footer footer{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 10px 20px;
+
+}
+.footer a{
+    text-decoration: none;
+    color: #192740;
+}
+
+/*about.html*/
+    /*Definition list*/
+
+.about_body{
+    background-color: whitesmoke;
+}
+
+.description{
+    overflow:auto;
+    width: 50%;
+    height: max-content;
+    margin: 55px auto 35px;
+    border: 5px dotted black;
+    border-radius: 25px;
+    padding: 40px;
+    background-clip: padding-box;
+    background: url("../styles/images/bg_about.jpg") no-repeat center;
+    background-size: cover;}
+
+.description figure{
+    display:inline;
+    float: right;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 1px solid black;}
+
+.description figure img{
+    width: 150px;
+    height: 150px;}
+
+#dictionary_list{
+    display: inline;
+    float: left;
+    width: 60%;
+    line-height: 2;
+}
+
+dt{
+    float: left;
+    font-weight: bold;
+    color: whitesmoke;}
+  
+dd {text-align: right;
+    color: whitesmoke;
+    margin-bottom: .5em;}
+
+/*rows of pictures*/
+.prompt_about{
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.scroll_container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scroll_container img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    display: inline-block;
+    margin-right: 5px;
+    animation: scroll 20s linear infinite; 
+    animation-play-state: running;}
+
+.scroll_container:hover img {
+    animation-play-state: paused; 
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - 10px)); }
+}
+/*Time table*/
+.timetable, .todo_list{
+    height: auto;
+    margin: auto;
+    margin-bottom: 55px;}
+
+table{
+    width: 60%;
+    margin: 0 auto 55px;
+    border-collapse: collapse;}
+
+table, th, td {
+    border: 1px solid black;}
+
+th, td{
+    padding: 12px;text-align: center;
+}
+
+th {
+  background-color: #4B6D90;
+  color: white;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
+/*apply.html*/
+    /*form list*/
+.apply_body{
+    background: url("../styles/images/bg_apply.png") no-repeat center; /*Source: https://www.artsy.net/artwork/natalie-cheung-intermediaries-29-and-13-hours*/
+    background-size: cover; 
+    position: relative;
+}
+
+.form{
+    border: 2px inset #4B6D90;
+    margin: auto;
+    padding: 1em;
+    width: 80%;
+    position:relative;
+    margin-bottom:55px;
+    margin-top:55px;
+    background-color: whitesmoke;}
+
+form{
+    padding: 3%;}
+
+.form h1{
+    color: #192740; 
+    margin:20px 0 20px; 
+    font-weight:bold;
+    text-align: center;
+    font-size: 2em;}
+
+/* Arrange columns with equal space between them */
+.form_columns {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.form_left, .form_right{
+    width: 45%;
+    box-sizing: border-box;
+}
+
+.form input, .form textarea{
+    width: 100%;
+    padding: 12px; 
+    border: none;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: .7em;
+    box-sizing: border-box; 
+}
+.form label{
+    margin-bottom: .5em;}
+
+select{
+    width: 100%;
+    height: 40px;
+    margin-bottom: .5em;}
+
+.gender p, .checkbox p {
+    align-items: center;
+    display: flex;
+    padding: 1em;}
+
+.gender label, .checkbox label {
+    margin-right: 5px;
+}
+
+.gender legend{
+    background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+/*input and label to the left*/
+.gender input, .checkbox input {
+    justify-content: left;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    padding: 1em;
+}
+
+.checkbox p{
+    margin-top: 3px;
+    margin-bottom: 100%;
+}
+.button_container {
+    text-align: center; 
+    margin-top: 20px; 
+}
+/*resize textarea instead of adding margin*/
+textarea{
+    margin-top: 7px;
+}
+.button_container button {
+    padding: 10px 20px;
+    background-color: #4B6D90;
+    border: 1px solid #ddd;
+    color: white;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #85AED0;
+}
+
+/*index.html*/
+.index_body{
+    color: #3152bf;
+    background: url("../styles/images/bg_index.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.index_content{
+    margin: auto; 
+    padding: 35px 50px 35px;
+}
+
+/*layout for article_index section*/
+.article_index{
+    float: left;
+    width: 50%;
+    height: max-content;
+    margin-bottom: 5%;
+    padding: 0;
+}
+
+.prompt_index{
+    letter-spacing: 2px;
+    letter-spacing: -2px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px auto 30px;
+}
+
+.content {
+    display: none;
+    padding: 0 20px 0 20px;
+}
+
+/*show content when checkbox is checked */
+#toggle1:checked ~ #content1,
+#toggle2:checked ~ #content2 {
+    display: block;
+}
+
+/*styling for labels */
+.title:hover {
+    color: white;
+    background-color: #192740;
+}
+
+.article_index input[type="radio"] {
+    display: none;
+}
+
+#title2{
+    margin-right: 20px;
+    display: inline-block;
+}
+
+/*graphic layout*/
+.graphic{
+    float: right;
+    width: 40%;
+}
+
+.title, #title3, #text1, #text2, #text3{
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.title{
+    font-size: 15px;
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+#title1{
+    margin-left: 17px;
+}
+
+#title2{
+    display: block;
+    float: right;
+}
+
+.graphic img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* Add your styles here */
+.image-container {
+  position: relative;
+  display: inline-block; /* Ensure the container only occupies the space needed */
+}
+
+.magnifier {
+  position: absolute;
+  border: 3px solid #000;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.zoom {
+  position: relative;
+}
+
+.zoom-image {
+  display: block;
+  width: 100%;
+}
+
+/* You may need to adjust other styles as needed */
+
+.graphic p, .content{
+    text-align: justify;
+}
+
+    /*background - floating quote*/
+    /*doesnt show pic dunno why*/
+.floating{
+    background-image: url("../styles/images/bg_index.jpg");
+    background-position: center center;
+    overflow:auto;
+    background-size: cover; 
+    height:252px;
+    width: 100%;}
+
+.floating p{
+    animation: scrolling-text 30s linear infinite;
+    display: inline-block;
+    transform: translateX(100%);
+    white-space: nowrap;
+    line-height: 1.26;
+    font-weight: 500;
+    text-align: right;
+}
+
+/*jobs.html*/
+    /*aside textbox*/
+aside {
+    float: right;
+    width: 25%;
+    height: max-content;
+    margin: 5% 5% 5% 0; 
+    padding: 35px 50px 35px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #19274050;
+}
+
+.job h1{
+    font: italic bold 17px Georgia, serif;
+    line-height: 1.5;
+}
+
+aside h3{
+    text-align: center;
+    margin-top: 3%;
+}
+
+aside p {
+    margin: 3% 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.logo1 img{
+    display:block;
+    margin: auto;
+	height:60px; 
+	width: 150px;
+}
+
+.button {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #85AED0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #4B6D90;
+}
+
+/*Job textbox*/
+.job{
+    float: left;
+    width: 60%;
+    height: max-content;
+    margin: 5% 0 5% 5%;
+    padding: 35px 50px 35px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    border: 1px solid #19274050;
+}
+
+.apply_btn {
+    padding: 10px 20px;
+    background-color: #85AED0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply_btn:hover {
+    background-color: #4B6D90;
+}
+
+.short_description h1{
+    font-family: "Palatino", serif;
+    font-size: 20px;
+}
+
+.detailed_description{
+    text-align: justify;
+    padding: 15px;
+}
+
+.short_description{
+    padding: 2em 2em;
+}
+
+.toggle_arrow {
+    font-size: 16px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/*Rotate arrow when detailed description is opened*/
+details[open] .toggle_arrow {
+    transform: rotate(90deg);
+}
+
+/*Hide detailed description by default*/
+.detailed_description {
+    display: none;
+}
+
+/*Show detailed description when the details is opened*/
+details[open] .detailed_description {
+    display: block;}
+
+summary {
+    cursor: pointer; /*Make the summary clickable*/
+    outline: none; /*Remove default outline*/
+    padding: 15px; 
+    background-color: #f0f0f0; 
+    border-left: 5px solid #192740;
+    border-radius: 5px; 
+    margin-bottom: 10px;}
+
+/*Add custom icon for summary*/
+summary::before {
+    display: inline-block;
+    margin-right: 5px;}
+
+/*enhancements.html*/
+.enhancements{
+    text-align: justify;
+    width: 70%;
+    height: max-content;
+    margin: 5% auto; 
+    padding: 35px 50px 35px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #19274050;
+}
